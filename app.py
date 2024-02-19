@@ -2,6 +2,7 @@ from sanic import Sanic
 from sanic.response import json, html
 from bindb import bin_scrape
 from ua import ua_scrape
+from rnd import rnd_scrape
 
 app = Sanic('binchk-app')
 
@@ -11,9 +12,7 @@ INDEX = '''
         <body>
             <h1>BIN CHK API!</h1>
             <h3>Stable bin Database</h3>
-            <h3>Example to use: https://binchk-api.vercel.app/bin=510805<h3>
-            <h6>©Copyright by <a href="https://t.me/Xbinner69">Nitin</a></h6>
-            <h6>Source code: <a href="https://github.com/xbinner18/binchk-api">github.com/Nitin181/binchk-api</a></h6>
+
         </body>
     </html>
     '''
@@ -32,6 +31,11 @@ async def binn(request, query):
 @app.route('/ua')
 async def rndua(request):
     return json(await ua_scrape())
+
+@app.route('/rnd')
+async def rnd_scrape(request):
+    return json(await rnd_scrape())
+    
 
 
 if __name__ == "__main__":
