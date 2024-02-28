@@ -6,6 +6,7 @@ from rnd import rnd_scrape
 
 app = Sanic('binchk-app')
 
+
 INDEX = '''
     <html>
         <body>
