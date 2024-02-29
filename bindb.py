@@ -2,6 +2,8 @@ import httpx
 import flag
 from bs4 import BeautifulSoup as bs
 
+
+
 async def bin_scrape(binov: int):
     url = f'https://bincheck.io/details/{binov}'
     if len(binov) < 6:
