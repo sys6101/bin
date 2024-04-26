@@ -23,8 +23,9 @@ def index(request):
 
 @app.route('/flag=<query>')
 def binn(request, query):
-    data = flag.flag(query)    
-    return data
+    data = flag.flag(query) 
+    msg = {'flag':data}
+    return json(data)
 
 
     
