@@ -23,7 +23,7 @@ def index(request):
 
 @app.route('/flag=<query>')
 def binn(request, query):
-     data = flag.flag(code)
+    data = flag.flag(code)    
     return data
 
 
