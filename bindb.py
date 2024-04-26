@@ -3,7 +3,7 @@ import flag
 from bs4 import BeautifulSoup as bs
 
 
-async def bin_scrape(code):
+def bin_scrape(code):
     # url = f'https://bincheck.io/details/{binov}'
     # if len(binov) < 6:
     #     return {"status": False, "error": "INVALID DATA PROVIDED 6 DIGITS REQUIRED"}
