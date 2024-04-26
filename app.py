@@ -25,7 +25,7 @@ def index(request):
 def binn(request, query):
     data = flag.flag(query) 
     msg = {'flag':data}
-    return json(data)
+    return json(msg)
 
 
     
