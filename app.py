@@ -19,7 +19,7 @@ INDEX = '''
 
 
 @app.route('/')
-async def index(request):
+def index(request):
     return html(INDEX)
 
 
