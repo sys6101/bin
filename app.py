@@ -1,8 +1,8 @@
 from sanic import Sanic
 from sanic.response import json, html
 from bindb import bin_scrape
-from ua import ua_scrape
-from rnd import rnd_scrape
+# from ua import ua_scrape
+# from rnd import rnd_scrape
 
 app = Sanic('binchk-app')
 
@@ -28,13 +28,13 @@ def binn(request, query):
     return json(bin_scrape(query))
 
 
-@app.route('/ua')
-async def rndua(request):
-    return json(await ua_scrape())
+# @app.route('/ua')
+# async def rndua(request):
+#     return json(await ua_scrape())
 
-@app.route('/rnd')
-async def rnd_scrape(request):
-    return json(await rnd_scrape())
+# @app.route('/rnd')
+# async def rnd_scrape(request):
+#     return json(await rnd_scrape())
     
 
 
