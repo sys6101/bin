@@ -24,7 +24,7 @@ async def index(request):
 
 
 @app.route('/bin=<query>')
-async def binn(request, query):
+def binn(request, query):
     return json(bin_scrape(query))
 
 
